@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Laravel</title>
+        <title>laraVue</title>
         <link rel="icon" href="{{ url('img/vkIcon.png') }}" />
         <link rel="shortcut icon" href="{{ url('img/vkIcon.png') }}" type="image/x-icon" />
 

@@ -5384,9 +5384,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      count: 0
+    };
   }
 });
 
@@ -27999,32 +28011,49 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              ),
-            ]),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8 mt-3" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Example Component"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "button",
+              {
+                on: {
+                  click: function ($event) {
+                    _vm.count--
+                  },
+                },
+              },
+              [_vm._v("\n                        (-)\n                    ")]
+            ),
+            _vm._v(
+              "\n                    count : " +
+                _vm._s(_vm.count) +
+                "\n                    \n                    "
+            ),
+            _c(
+              "button",
+              {
+                on: {
+                  click: function ($event) {
+                    _vm.count++
+                  },
+                },
+              },
+              [_vm._v("\n                        (+)\n                    ")]
+            ),
           ]),
         ]),
       ]),
-    ])
-  },
-]
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
