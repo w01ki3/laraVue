@@ -6,12 +6,12 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        <button @click="count--">
+                        <button class="btn btn-primary" @click="count--">
                             (-)
                         </button>
                         count : {{ count }}
                         
-                        <button @click="count++">
+                        <button class="btn btn-primary" @click="count++">
                             (+)
                         </button>
                     </div>

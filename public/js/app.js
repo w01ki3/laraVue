@@ -28023,6 +28023,7 @@ var render = function () {
             _c(
               "button",
               {
+                staticClass: "btn btn-primary",
                 on: {
                   click: function ($event) {
                     _vm.count--
@@ -28039,6 +28040,7 @@ var render = function () {
             _c(
               "button",
               {
+                staticClass: "btn btn-primary",
                 on: {
                   click: function ($event) {
                     _vm.count++
