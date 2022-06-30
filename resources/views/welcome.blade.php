@@ -13,7 +13,20 @@
     </head>
     <body class="antialiased">
         <div id="app">
-            <example-component></example-component>
+            <div class="container">
+                <ul class="nav">
+                    <li class="nav-item">
+                      <router-link class="nav-link" to="/">Home</router-link>
+                    </li>
+                    <li class="nav-item">
+                      <router-link class="nav-link" to="/link1">Link - 1</router-link>
+                    </li>
+                    <li class="nav-item">
+                      <router-link class="nav-link" to="/link2">Link - 2</router-link>
+                    </li>
+                  </ul>
+            </div>
+            <router-view></router-view>
         </div>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
