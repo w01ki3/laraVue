@@ -2,10 +2,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8 mt-3">
                 <div class="card">
-                    <div class="card-header">Home Component</div>
-
+                    <div class="card-header">Ana Dizin & Vue</div>
                     <div class="card-body">
-                        <h1>Welcome to home component</h1>
+                        <li v-for="(item, index) in dersler" :key="index">
+                            <a :href="item[2]">
+                                {{ item[0] }} / {{ item[1] }}
+                            </a>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -16,6 +19,15 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data() {
+            return {
+                dersler: [
+                    ['Ders -1','Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks','lesson-1'],
+                    ['Ders -2','-','lesson-2'],
+                    ['Ders -3','-','lesson-3'],
+                ]
+            }
         },
     }
 </script>

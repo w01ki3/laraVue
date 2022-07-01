@@ -29,13 +29,30 @@
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <router-link to="/" class="nav-link" exact>Home</router-link>
+                                <router-link to="/" class="nav-link" exact>Ana Dizin</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link to="/link1" class="nav-link" exact>Link - 1</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link to="/link2" class="nav-link" exact>Link - 2</router-link>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dersler
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <router-link to="/lesson-1" class="dropdown-item" exact>Ders - 1</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/lesson-2" class="dropdown-item" exact>Ders - 2</router-link>
+                                    </li>
+                                    <li>
+                                        <router-link to="/lesson-3" class="dropdown-item" exact>Ders - 3</router-link>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
