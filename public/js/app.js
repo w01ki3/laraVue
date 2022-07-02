@@ -5525,6 +5525,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28786,13 +28787,9 @@ var staticRenderFns = [
     return _c("td", [
       _c("pre", [
         _c("code", [
-          _vm._v('<span v-if="numberValue > 50">50 den büyük</span>'),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("pre", [
-        _c("code", [
-          _vm._v("<span v-else>50 den küçük yada 50 ye eşit</span>"),
+          _vm._v(
+            '\n<span v-if="numberValue > 50">50 den büyük</span>\n<span v-else>50 den küçük yada 50 ye eşit</span>'
+          ),
         ]),
       ]),
     ])

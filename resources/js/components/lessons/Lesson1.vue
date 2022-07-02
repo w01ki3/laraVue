@@ -27,8 +27,9 @@
                   <code> numberValue = {{ numberValue }} </code>
                 </td>
                 <td>
-                  <pre><code>&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;</code></pre>
-                  <pre><code>&lt;span v-else&gt;50 den küçük yada 50 ye eşit&lt;/span&gt;</code></pre>
+                  <pre><code>
+&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;
+&lt;span v-else&gt;50 den küçük yada 50 ye eşit&lt;/span&gt;</code></pre>
                 </td>
                 <td>
                   <span v-if="numberValue > 50">50 den büyük</span>
