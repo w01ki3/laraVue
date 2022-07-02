@@ -5514,11 +5514,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      table: [['htmlContent', "<strong>HTML içerik</strong>"]],
-      numberValue: 50
+      htmlContent: "<strong>HTML içerik</strong>",
+      numberValue: 51
     };
   }
 });
@@ -28706,9 +28717,13 @@ var render = function () {
             _vm._v(" "),
             _c("tbody", [
               _c("tr", [
-                _c("td", [_vm._v("htmlContent = " + _vm._s(_vm.htmlContent))]),
+                _c("td", [
+                  _c("code", [
+                    _vm._v(" htmlContent = " + _vm._s(_vm.htmlContent) + " "),
+                  ]),
+                ]),
                 _vm._v(" "),
-                _c("td"),
+                _vm._m(1),
                 _vm._v(" "),
                 _c("td", [
                   _c("span", {
@@ -28717,9 +28732,23 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c("tr", [
+                _c("td", [
+                  _c("code", [
+                    _vm._v(" numberValue = " + _vm._s(_vm.numberValue) + " "),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _c("td", [
+                  _vm.numberValue > 50
+                    ? _c("span", [_vm._v("50 den büyük")])
+                    : _c("span", [_vm._v("50 den küçük yada 50 ye eşit")]),
+                ]),
+              ]),
               _vm._v(" "),
-              _vm._m(2),
+              _vm._m(3),
             ]),
           ]),
         ]),
@@ -28746,15 +28775,26 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("td", [_vm._v("numberValue = 50")]),
-      _vm._v(" "),
-      _c("td", [
-        _c("code", [_vm._v("test")]),
-        _vm._v(' tag v-if="numberValue>49"'),
+    return _c("td", [
+      _c("pre", [_c("code", [_vm._v('<span v-html="htmlContent"></span>')])]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v('<span v-if="numberValue > 50">50 den büyük</span>'),
+        ]),
       ]),
       _vm._v(" "),
-      _c("td"),
+      _c("pre", [
+        _c("code", [
+          _vm._v("<span v-else>50 den küçük yada 50 ye eşit</span>"),
+        ]),
+      ]),
     ])
   },
   function () {

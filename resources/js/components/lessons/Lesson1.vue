@@ -23,14 +23,16 @@
                 <td><span v-html="htmlContent"></span></td>
               </tr>
               <tr>
-                <td>numberValue = 50</td>
                 <td>
-                  <pre><code>&lt;span v-if="numberValue > 49"&gt;49 dan büyük&lt;/span&gt;</code></pre>
-                  <pre><code>&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;</code></pre>
+                  <code> numberValue = {{ numberValue }} </code>
                 </td>
                 <td>
-                  <span v-if="numberValue > 49">49 dan büyük</span>
-                  <span v-if="numberValue > 51">51 den büyük</span>
+                  <pre><code>&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;</code></pre>
+                  <pre><code>&lt;span v-else&gt;50 den küçük yada 50 ye eşit&lt;/span&gt;</code></pre>
+                </td>
+                <td>
+                  <span v-if="numberValue > 50">50 den büyük</span>
+                  <span v-else>50 den küçük yada 50 ye eşit</span>
                 </td>
               </tr>
               <tr>
@@ -51,7 +53,7 @@ export default {
   data() {
     return {
       htmlContent: "<strong>HTML içerik</strong>",
-      numberValue: 50,
+      numberValue: 51,
     };
   },
 };
