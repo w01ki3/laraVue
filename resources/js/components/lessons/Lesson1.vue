@@ -14,15 +14,24 @@
             </thead>
             <tbody>
               <tr>
-                <td>htmlContent = {{ htmlContent }}</td>
                 <td>
+                  <code> htmlContent = {{ htmlContent }} </code>
+                </td>
+                <td>
+                  <pre><code>&lt;span v-html="htmlContent"&gt;&lt;/span&gt;</code></pre>
                 </td>
                 <td><span v-html="htmlContent"></span></td>
               </tr>
               <tr>
                 <td>numberValue = 50</td>
-                <td><code>test</code> tag v-if="numberValue>49"</td>
-                <td></td>
+                <td>
+                  <pre><code>&lt;span v-if="numberValue > 49"&gt;49 dan büyük&lt;/span&gt;</code></pre>
+                  <pre><code>&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;</code></pre>
+                </td>
+                <td>
+                  <span v-if="numberValue > 49">49 dan büyük</span>
+                  <span v-if="numberValue > 51">51 den büyük</span>
+                </td>
               </tr>
               <tr>
                 <td></td>
@@ -41,11 +50,8 @@
 export default {
   data() {
     return {
-        table : [
-            ['htmlContent',"<strong>HTML içerik</strong>",]
-
-        ],
-        numberValue: 50,
+      htmlContent: "<strong>HTML içerik</strong>",
+      numberValue: 50,
     };
   },
 };
