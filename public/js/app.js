@@ -5391,7 +5391,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      dersler: [['Ders -1', 'Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks', 'lesson-1'], ['Ders -2', '-', 'lesson-2'], ['Ders -3', '-', 'lesson-3']]
+      dersler: [['Ders -1', 'Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks', 'lesson-1'], ['Ders -2', 'Form elementleri  ve özellikleri', 'lesson-2'], ['Ders -3', '-', 'lesson-3']]
     };
   }
 });
@@ -5608,7 +5608,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      inputValue: "yaz yada sil"
+    };
+  }
+});
 
 /***/ }),
 
@@ -28982,21 +29009,83 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "row justify-content-center" }, [
+    _c("div", { staticClass: "col-md-8 mt-3" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [_vm._v("Ders 2")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "table-responsive" }, [
+            _c("table", { staticClass: "table table-striped table-bordered" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" inputValue = " + _vm._s(_vm.inputValue) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.inputValue,
+                          expression: "inputValue",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.inputValue },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.inputValue = $event.target.value
+                        },
+                      },
+                    }),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8 mt-3" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Ders 2")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }),
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticStyle: { width: "27%" }, attrs: { scope: "col" } }, [
+          _vm._v("değişken/ler"),
         ]),
+        _vm._v(" "),
+        _c("th", { staticStyle: { width: "27%" }, attrs: { scope: "col" } }, [
+          _vm._v("kullanım"),
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("sonuç")]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [_c("code", [_vm._v('<input v-model="inputValue">')])]),
     ])
   },
 ]

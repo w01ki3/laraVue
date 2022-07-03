@@ -24,7 +24,7 @@
             return {
                 dersler: [
                     ['Ders -1','Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks','lesson-1'],
-                    ['Ders -2','-','lesson-2'],
+                    ['Ders -2','Form elementleri  ve özellikleri','lesson-2'],
                     ['Ders -3','-','lesson-3'],
                 ]
             }
