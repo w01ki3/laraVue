@@ -7,8 +7,8 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th scope="col">değişken/ler</th>
-                <th scope="col">kullanım</th>
+                <th scope="col" style="width: 27%">değişken/ler</th>
+                <th scope="col" style="width: 27%">kullanım</th>
                 <th scope="col">sonuç</th>
               </tr>
             </thead>
@@ -27,8 +27,7 @@
                   <code> numberValue = {{ numberValue }} </code>
                 </td>
                 <td>
-                  <pre><code>
-&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;
+                  <pre><code>&lt;span v-if="numberValue > 50"&gt;50 den büyük&lt;/span&gt;
 &lt;span v-else&gt;50 den küçük yada 50 ye eşit&lt;/span&gt;</code></pre>
                 </td>
                 <td>
@@ -37,9 +36,28 @@
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>
+                  <code>items = {{ items }}</code>
+                </td>
+                <td>
+                  <pre><code>&lt;li v-for="item in items"&gt;{ item }&lt;li&gt;</code></pre>
+                </td>
+                <td>
+                  <li v-for="item in items">{{ item }}</li>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>listData = {{ listData }}</code>
+                </td>
+                <td>
+                  <pre><code>&lt;li v-for="listItem in listData"&gt;{ listItem.itemName }&lt;li&gt;</code></pre>
+                </td>
+                <td>
+                  <li v-for="listItem in listData">
+                    {{ listItem.itemName }}
+                  </li>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -55,6 +73,12 @@ export default {
     return {
       htmlContent: "<strong>HTML içerik</strong>",
       numberValue: 51,
+      items: ["data1", "data2", "data3"],
+      listData: [
+        { itemName: "item1", content: "content1" },
+        { itemName: "item2", content: "content2" },
+        { itemName: "item3", content: "content3" },
+      ],
     };
   },
 };

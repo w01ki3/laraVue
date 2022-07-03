@@ -5526,11 +5526,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       htmlContent: "<strong>HTML içerik</strong>",
-      numberValue: 51
+      numberValue: 51,
+      items: ["data1", "data2", "data3"],
+      listData: [{
+        itemName: "item1",
+        content: "content1"
+      }, {
+        itemName: "item2",
+        content: "content2"
+      }, {
+        itemName: "item3",
+        content: "content3"
+      }]
     };
   }
 });
@@ -28749,7 +28778,43 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _vm._m(3),
+              _c("tr", [
+                _c("td", [
+                  _c("code", [_vm._v("items = " + _vm._s(_vm.items))]),
+                ]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  _vm._l(_vm.items, function (item) {
+                    return _c("li", [_vm._v(_vm._s(item))])
+                  }),
+                  0
+                ),
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("code", [_vm._v("listData = " + _vm._s(_vm.listData))]),
+                ]),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  _vm._l(_vm.listData, function (listItem) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(listItem.itemName) +
+                          "\n                  "
+                      ),
+                    ])
+                  }),
+                  0
+                ),
+              ]),
             ]),
           ]),
         ]),
@@ -28764,9 +28829,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("değişken/ler")]),
+        _c("th", { staticStyle: { width: "27%" }, attrs: { scope: "col" } }, [
+          _vm._v("değişken/ler"),
+        ]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("kullanım")]),
+        _c("th", { staticStyle: { width: "27%" }, attrs: { scope: "col" } }, [
+          _vm._v("kullanım"),
+        ]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("sonuç")]),
       ]),
@@ -28788,7 +28857,7 @@ var staticRenderFns = [
       _c("pre", [
         _c("code", [
           _vm._v(
-            '\n<span v-if="numberValue > 50">50 den büyük</span>\n<span v-else>50 den küçük yada 50 ye eşit</span>'
+            '<span v-if="numberValue > 50">50 den büyük</span>\n<span v-else>50 den küçük yada 50 ye eşit</span>'
           ),
         ]),
       ]),
@@ -28798,7 +28867,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [_c("td"), _vm._v(" "), _c("td"), _vm._v(" "), _c("td")])
+    return _c("td", [
+      _c("pre", [
+        _c("code", [_vm._v('<li v-for="item in items">{ item }<li>')]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v('<li v-for="listItem in listData">{ listItem.itemName }<li>'),
+        ]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
