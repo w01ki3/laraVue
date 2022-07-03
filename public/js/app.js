@@ -5544,6 +5544,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28742,78 +28760,120 @@ var render = function () {
         _c("div", { staticClass: "card-header" }, [_vm._v("Ders 1")]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
-          _c("table", { staticClass: "table table-striped table-bordered" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [
-                  _c("code", [
-                    _vm._v(" htmlContent = " + _vm._s(_vm.htmlContent) + " "),
+          _c("div", { staticClass: "table-responsive" }, [
+            _c("table", { staticClass: "table table-striped table-bordered" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" htmlContent = " + _vm._s(_vm.htmlContent) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("span", {
+                      domProps: { innerHTML: _vm._s(_vm.htmlContent) },
+                    }),
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _c("td", [
-                  _c("span", {
-                    domProps: { innerHTML: _vm._s(_vm.htmlContent) },
-                  }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("code", [
-                    _vm._v(" numberValue = " + _vm._s(_vm.numberValue) + " "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" numberValue = " + _vm._s(_vm.numberValue) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm.numberValue > 50
+                      ? _c("span", [_vm._v("50 den büyük")])
+                      : _vm.numberValue == 50
+                      ? _c("span", [_vm._v("50 ye eşit")])
+                      : _c("span", [_vm._v("50 den küçük")]),
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _c("td", [
-                  _vm.numberValue > 50
-                    ? _c("span", [_vm._v("50 den büyük")])
-                    : _c("span", [_vm._v("50 den küçük yada 50 ye eşit")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("code", [_vm._v("items = " + _vm._s(_vm.items))]),
-                ]),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _c(
-                  "td",
-                  _vm._l(_vm.items, function (item) {
-                    return _c("li", [_vm._v(_vm._s(item))])
-                  }),
-                  0
-                ),
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("code", [_vm._v("listData = " + _vm._s(_vm.listData))]),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [_vm._v("items = " + _vm._s(_vm.items))]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    _vm._l(_vm.items, function (item) {
+                      return _c("li", [_vm._v(_vm._s(item))])
+                    }),
+                    0
+                  ),
                 ]),
                 _vm._v(" "),
-                _vm._m(4),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [_vm._v("listData = " + _vm._s(_vm.listData))]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    _vm._l(_vm.listData, function (listItem) {
+                      return _c("li", [
+                        _vm._v(
+                          "\n                      " +
+                            _vm._s(listItem.itemName) +
+                            "\n                    "
+                        ),
+                      ])
+                    }),
+                    0
+                  ),
+                ]),
                 _vm._v(" "),
-                _c(
-                  "td",
-                  _vm._l(_vm.listData, function (listItem) {
-                    return _c("li", [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(listItem.itemName) +
-                          "\n                  "
-                      ),
-                    ])
-                  }),
-                  0
-                ),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" numberValue = " + _vm._s(_vm.numberValue) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        on: {
+                          click: function ($event) {
+                            _vm.numberValue--
+                          },
+                        },
+                      },
+                      [_vm._v("-")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        on: {
+                          click: function ($event) {
+                            _vm.numberValue++
+                          },
+                        },
+                      },
+                      [_vm._v("+")]
+                    ),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -28857,7 +28917,7 @@ var staticRenderFns = [
       _c("pre", [
         _c("code", [
           _vm._v(
-            '<span v-if="numberValue > 50">50 den büyük</span>\n<span v-else>50 den küçük yada 50 ye eşit</span>'
+            '<span v-if="numberValue > 50">50 den büyük</span>\n<span v-else-if="numberValue == 50">50 ye eşit</span>\n<span v-else>50 den küçük</span>'
           ),
         ]),
       ]),
@@ -28881,6 +28941,20 @@ var staticRenderFns = [
       _c("pre", [
         _c("code", [
           _vm._v('<li v-for="listItem in listData">{ listItem.itemName }<li>'),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            '<button class="btn btn-primary" @click="numberValue--">-<button>\n<button class="btn btn-primary" @click="numberValue++">+<button>\n                  '
+          ),
         ]),
       ]),
     ])
