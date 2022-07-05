@@ -65,8 +65,37 @@ computed:{
                                     <td>
                                         <input type="text" class="form-control" v-model="inputValue" :class="bindClass">
                                         <div class="invalid-feedback">
+                                            <li v-for="(error,index) in errors" :key="index">{{ error }}</li>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <li v-for="(row,index) in inputData" :key="index">{{ row }}
+                                            <button class="btn btn-danger btn-sm mb-1" @click="deleteData(index)">[-]</button>
+                                        </li>
+                                    </td>
+                                    <td><pre><code>&lt;button :disabled="errors.length>0 
+|| inputValue==''" @click="addData"&gt;add [+]&lt;/button&gt;
+&lt;button @click="deleteData(index)"&gt;[-]&lt;/button&gt;
+
+methods: {
+    addData(){
+        this.inputData.push(this.inputValue)
+    },
+    deleteData(index){
+        this.$delete(this.inputData,index)
+    } 
+}
+</code></pre></td>
+                                    <td>
+                                        <input type="text" class="form-control" v-model="inputValue" :class="bindClass">
+                                        <div class="invalid-feedback">
                                             <li v-for="error in errors">{{ error }}</li>
                                         </div>
+                                        <hr>
+                                        <button :disabled="errors.length>0 || inputValue==''" class="btn btn-primary" @click="addData">add [+]</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -85,6 +114,7 @@ export default {
             process:"Bir işlem yapılmadı",
             inputValue:"",
             errors:[],
+            inputData:[],
         }
     },
     watch:{
@@ -110,7 +140,16 @@ export default {
                 'is-valid': this.inputValue != ''
             }
       }
-    }
+    },
+    methods: {
+        addData(){
+            this.inputData.push(this.inputValue)
+        },
+        deleteData(index){
+            this.$delete(this.inputData,index)
+        } 
+        
+    },
 }
 </script>
 <style lang="">

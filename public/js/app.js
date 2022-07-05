@@ -5932,13 +5932,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       counter: 0,
       process: "Bir işlem yapılmadı",
       inputValue: "",
-      errors: []
+      errors: [],
+      inputData: []
     };
   },
   watch: {
@@ -5964,6 +5994,14 @@ __webpack_require__.r(__webpack_exports__);
         'is-invalid': this.errors.length > 0,
         'is-valid': this.inputValue != ''
       };
+    }
+  },
+  methods: {
+    addData: function addData() {
+      this.inputData.push(this.inputValue);
+    },
+    deleteData: function deleteData(index) {
+      this.$delete(this.inputData, index);
     }
   }
 });
@@ -30737,10 +30775,88 @@ var render = function () {
                     _c(
                       "div",
                       { staticClass: "invalid-feedback" },
+                      _vm._l(_vm.errors, function (error, index) {
+                        return _c("li", { key: index }, [_vm._v(_vm._s(error))])
+                      }),
+                      0
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c(
+                    "td",
+                    _vm._l(_vm.inputData, function (row, index) {
+                      return _c("li", { key: index }, [
+                        _vm._v(
+                          _vm._s(row) +
+                            "\n                                            "
+                        ),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-danger btn-sm mb-1",
+                            on: {
+                              click: function ($event) {
+                                return _vm.deleteData(index)
+                              },
+                            },
+                          },
+                          [_vm._v("[-]")]
+                        ),
+                      ])
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.inputValue,
+                          expression: "inputValue",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      class: _vm.bindClass,
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.inputValue },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.inputValue = $event.target.value
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "invalid-feedback" },
                       _vm._l(_vm.errors, function (error) {
                         return _c("li", [_vm._v(_vm._s(error))])
                       }),
                       0
+                    ),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: {
+                          disabled:
+                            _vm.errors.length > 0 || _vm.inputValue == "",
+                        },
+                        on: { click: _vm.addData },
+                      },
+                      [_vm._v("add [+]")]
                     ),
                   ]),
                 ]),
@@ -30780,6 +30896,20 @@ var staticRenderFns = [
         _c("code", [
           _vm._v(
             '<button @click="counter++">[+]</button>\n<button @click="counter--">[-]</button>\nwatch:{\n    counter(val,oldVal){\n        val>oldVal ? this.process="Arttırıldı" : this.process="Azaltıldı"\n        this.process +=" | eski değer : " + oldVal\n    }\n}'
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            '<button :disabled="errors.length>0 \n|| inputValue==\'\'" @click="addData">add [+]</button>\n<button @click="deleteData(index)">[-]</button>\n\nmethods: {\n    addData(){\n        this.inputData.push(this.inputValue)\n    },\n    deleteData(index){\n        this.$delete(this.inputData,index)\n    } \n}\n'
           ),
         ]),
       ]),
