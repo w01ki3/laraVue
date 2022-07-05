@@ -68,6 +68,23 @@
                   </td>
                 </tr>
 
+                <tr>
+                  <td>
+                    <code> picked = {{ picked }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;input type="radio" id="one" value="One" v-model="picked"/&gt;
+&lt;input type="radio" id="two" value="Two" v-model="picked"/&gt;</code></pre>
+                  </td>
+                  <td>
+                    <input type="radio" id="one" value="One" v-model="picked" />
+                    <label for="one">One</label>
+
+                    <input type="radio" id="two" value="Two" v-model="picked" />
+                    <label for="two">Two</label>
+                  </td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -84,6 +101,7 @@ export default {
       inputValue: "yaz yada sil",
       checked: false,
       checkedNames:[],
+      picked: "One"
     };
   },
 };

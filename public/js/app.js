@@ -5674,12 +5674,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       inputValue: "yaz yada sil",
       checked: false,
-      checkedNames: []
+      checkedNames: [],
+      picked: "One"
     };
   }
 });
@@ -29316,6 +29334,58 @@ var render = function () {
                     _c("label", { attrs: { for: "3" } }, [_vm._v("3")]),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" picked = " + _vm._s(_vm.picked) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.picked,
+                          expression: "picked",
+                        },
+                      ],
+                      attrs: { type: "radio", id: "one", value: "One" },
+                      domProps: { checked: _vm._q(_vm.picked, "One") },
+                      on: {
+                        change: function ($event) {
+                          _vm.picked = "One"
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "one" } }, [_vm._v("One")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.picked,
+                          expression: "picked",
+                        },
+                      ],
+                      attrs: { type: "radio", id: "two", value: "Two" },
+                      domProps: { checked: _vm._q(_vm.picked, "Two") },
+                      on: {
+                        change: function ($event) {
+                          _vm.picked = "Two"
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "two" } }, [_vm._v("Two")]),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -29380,6 +29450,20 @@ var staticRenderFns = [
         _c("code", [
           _vm._v(
             '<input type="checkbox" id="1" value="1" v-model="checkedNames"/>\n<input type="checkbox" id="2" value="2" v-model="checkedNames"/>\n<input type="checkbox" id="3" value="3" v-model="checkedNames"/>'
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            '<input type="radio" id="one" value="One" v-model="picked"/>\n<input type="radio" id="two" value="Two" v-model="picked"/>'
           ),
         ]),
       ]),
