@@ -17,7 +17,9 @@
                                 <tr>
                                     <td><code>counter : {{ counter }} | process: {{ process }}</code></td>
                                     <td>
-                                        <pre><code>watch:{
+                                        <pre><code>&lt;button @click="counter++"&gt;[+]&lt;/button&gt;
+&lt;button @click="counter--"&gt;[-]&lt;/button&gt;
+watch:{
     counter(val,oldVal){
         val>oldVal ? this.process="Arttırıldı" : this.process="Azaltıldı"
         this.process +=" | eski değer : " + oldVal
@@ -27,6 +29,46 @@
                                     <td>
                                         <button class="btn btn-primary" @click="counter++">[+]</button>
                                         <button class="btn btn-danger" @click="counter--">[-]</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><code>inputValue = {{ inputValue }} | errors = {{ errors }}</code></td>
+                                    <td><pre><code>&lt;input type="text" class="form-control" 
+    v-model="inputValue" :class="getTypeClass"&gt;
+&lt;div class="invalid-feedback"&gt;
+    &lt;li v-for="error in errors">{{ error }}&lt;/li&gt;
+&lt;/div&gt;
+
+watch:{
+    inputValue(val){
+        this.errors = [];
+        if(val == ""){
+            this.errors.push("this field cannot be left blank")
+        }
+        if(val.length &lt; 4 || val.length > 15){
+            this.errors.push("value must be between 3 and 15 characters")
+        }
+    }
+
+},
+computed:{
+    getTypeClass () {
+        return {
+            'is-invalid': this.errors.length>0,
+            'is-valid': this.errors == null 
+            && this.inputValue &lt; 4 
+            || this.inputValue > 15, 
+        }
+  }
+}
+
+                                    </code></pre></td>
+                                    <td>
+                                        <input type="text" class="form-control" v-model="inputValue" :class="getTypeClass">
+                                        <div class="invalid-feedback">
+                                            <li v-for="error in errors">{{ error }}</li>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -43,13 +85,33 @@ export default {
         return {
             counter:0,
             process:"Bir işlem yapılmadı",
+            inputValue:"",
+            errors:[],
         }
     },
     watch:{
         counter(val,oldVal){
             val>oldVal ? this.process="Arttırıldı" : this.process="Azaltıldı"
             this.process +=" | eski değer : " + oldVal
+        },
+        inputValue(val){
+            this.errors = [];
+            if(val == ""){
+                this.errors.push("this field cannot be left blank")
+            }
+            if(val.length < 4 || val.length > 15){
+                this.errors.push("value must be between 3 and 15 characters")
+            }
         }
+
+    },
+    computed:{
+        getTypeClass () {
+            return {
+                'is-invalid': this.errors.length>0,
+                'is-valid': this.errors == null && this.inputValue < 4 || this.inputValue > 15, 
+            }
+      }
     }
 }
 </script>

@@ -5892,17 +5892,80 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       counter: 0,
-      process: "Bir işlem yapılmadı"
+      process: "Bir işlem yapılmadı",
+      inputValue: "",
+      errors: []
     };
   },
   watch: {
     counter: function counter(val, oldVal) {
       val > oldVal ? this.process = "Arttırıldı" : this.process = "Azaltıldı";
       this.process += " | eski değer : " + oldVal;
+    },
+    inputValue: function inputValue(val) {
+      this.errors = [];
+
+      if (val == "") {
+        this.errors.push("this field cannot be left blank");
+      }
+
+      if (val.length < 4 || val.length > 15) {
+        this.errors.push("value must be between 3 and 15 characters");
+      }
+    }
+  },
+  computed: {
+    getTypeClass: function getTypeClass() {
+      return {
+        'is-invalid': this.errors.length > 0,
+        'is-valid': this.errors == null && this.inputValue < 4 || this.inputValue > 15
+      };
     }
   }
 });
@@ -30624,6 +30687,65 @@ var render = function () {
                     ),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(
+                        "inputValue = " +
+                          _vm._s(_vm.inputValue) +
+                          " | errors = " +
+                          _vm._s(_vm.errors)
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("pre", [
+                      _c("code", [
+                        _vm._v(
+                          '<input type="text" class="form-control" \n    v-model="inputValue" :class="getTypeClass">\n<div class="invalid-feedback">\n    <li v-for="error in errors">' +
+                            _vm._s(_vm.error) +
+                            '</li>\n</div>\n\nwatch:{\n    inputValue(val){\n        this.errors = [];\n        if(val == ""){\n            this.errors.push("this field cannot be left blank")\n        }\n        if(val.length < 4 || val.length > 15){\n            this.errors.push("value must be between 3 and 15 characters")\n        }\n    }\n\n},\ncomputed:{\n    getTypeClass () {\n        return {\n            \'is-invalid\': this.errors.length>0,\n            \'is-valid\': this.errors == null \n            && this.inputValue < 4 \n            || this.inputValue > 15, \n        }\n  }\n}\n\n                                    '
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.inputValue,
+                          expression: "inputValue",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      class: _vm.getTypeClass,
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.inputValue },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.inputValue = $event.target.value
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "invalid-feedback" },
+                      _vm._l(_vm.errors, function (error) {
+                        return _c("li", [_vm._v(_vm._s(error))])
+                      }),
+                      0
+                    ),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -30659,7 +30781,7 @@ var staticRenderFns = [
       _c("pre", [
         _c("code", [
           _vm._v(
-            'watch:{\n    counter(val,oldVal){\n        val>oldVal ? this.process="Arttırıldı" : this.process="Azaltıldı"\n        this.process +=" | eski değer : " + oldVal\n    }\n}'
+            '<button @click="counter++">[+]</button>\n<button @click="counter--">[-]</button>\nwatch:{\n    counter(val,oldVal){\n        val>oldVal ? this.process="Arttırıldı" : this.process="Azaltıldı"\n        this.process +=" | eski değer : " + oldVal\n    }\n}'
           ),
         ]),
       ]),
