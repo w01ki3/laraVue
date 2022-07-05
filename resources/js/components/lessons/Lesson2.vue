@@ -90,7 +90,7 @@
                     <code> selected = {{ selected  }} </code>
                   </td>
                   <td>
-                    <pre><code>&lt;select v-model="selected" multiple&gt;
+                    <pre><code>&lt;select v-model="selected"&gt;
   &lt;option&gt;A&lt;/option&gt;
   &lt;option&gt;B&lt;/option&gt;
   &lt;option&gt;C&lt;/option&gt;
@@ -98,6 +98,26 @@
                   </td>
                   <td>
                     <select v-model="selected">
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code> selectedMulti = {{ selectedMulti  }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;select v-model="selectedMulti" multiple&gt;
+  &lt;option&gt;A&lt;/option&gt;
+  &lt;option&gt;B&lt;/option&gt;
+  &lt;option&gt;C&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </td>
+                  <td>
+                    <select v-model="selectedMulti" multiple>
                       <option>A</option>
                       <option>B</option>
                       <option>C</option>
@@ -128,7 +148,8 @@ export default {
       checked: false,
       checkedNames: [],
       picked: "One",
-      selected: [],
+      selected: "",
+      selectedMulti: [],
     };
   },
 };

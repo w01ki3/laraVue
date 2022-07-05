@@ -5717,6 +5717,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5724,7 +5744,8 @@ __webpack_require__.r(__webpack_exports__);
       checked: false,
       checkedNames: [],
       picked: "One",
-      selected: []
+      selected: "",
+      selectedMulti: []
     };
   }
 });
@@ -29462,7 +29483,58 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(7),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(
+                        " selectedMulti = " + _vm._s(_vm.selectedMulti) + " "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.selectedMulti,
+                            expression: "selectedMulti",
+                          },
+                        ],
+                        attrs: { multiple: "" },
+                        on: {
+                          change: function ($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function (o) {
+                                return o.selected
+                              })
+                              .map(function (o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.selectedMulti = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          },
+                        },
+                      },
+                      [
+                        _c("option", [_vm._v("A")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v("B")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v("C")]),
+                      ]
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _vm._m(8),
               ]),
             ]),
           ]),
@@ -29554,7 +29626,21 @@ var staticRenderFns = [
       _c("pre", [
         _c("code", [
           _vm._v(
-            '<select v-model="selected" multiple>\n  <option>A</option>\n  <option>B</option>\n  <option>C</option>\n</select>'
+            '<select v-model="selected">\n  <option>A</option>\n  <option>B</option>\n  <option>C</option>\n</select>'
+          ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            '<select v-model="selectedMulti" multiple>\n  <option>A</option>\n  <option>B</option>\n  <option>C</option>\n</select>'
           ),
         ]),
       ]),
