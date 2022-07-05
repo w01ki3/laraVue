@@ -4,7 +4,7 @@
     laraVue | w01ki3
 </p>
 
-## Educational note content that can be done with Laravel and vue
+<h2 align="center">Educational note content that can be done with Laravel and vue </h2>
 
 ### Installation
 ##### Step 1
