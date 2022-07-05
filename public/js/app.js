@@ -5745,7 +5745,8 @@ __webpack_require__.r(__webpack_exports__);
       checkedNames: [],
       picked: "One",
       selected: "",
-      selectedMulti: []
+      selectedMulti: [],
+      numberValue: 0
     };
   }
 });
@@ -29534,7 +29535,42 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _vm._m(8),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v("numberValue = " + _vm._s(_vm.numberValue)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(8),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model.number",
+                          value: _vm.numberValue,
+                          expression: "numberValue",
+                          modifiers: { number: true },
+                        },
+                      ],
+                      attrs: { type: "number" },
+                      domProps: { value: _vm.numberValue },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.numberValue = _vm._n($event.target.value)
+                        },
+                        blur: function ($event) {
+                          return _vm.$forceUpdate()
+                        },
+                      },
+                    }),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -29650,7 +29686,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [_c("td"), _vm._v(" "), _c("td"), _vm._v(" "), _c("td")])
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v('<input type="number" v-model.number="numberValue" />'),
+        ]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true

@@ -126,9 +126,9 @@
                 </tr>
 
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><code>numberValue = {{ numberValue }}</code></td>
+                  <td><pre><code>&lt;input type="number" v-model.number="numberValue" /&gt;</code></pre></td>
+                  <td><input type="number" v-model.number="numberValue" /></td>
                 </tr>
 
               </tbody>
@@ -150,6 +150,7 @@ export default {
       picked: "One",
       selected: "",
       selectedMulti: [],
+      numberValue: 0, 
     };
   },
 };
