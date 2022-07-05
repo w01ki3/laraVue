@@ -14,6 +14,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    
                                     <tr>
                                         <td><code>red = {{ red }}</code></td>
                                         <td><pre><code>&lt;span v-bind:class="{ 'text-danger':red }"&gt;color value : { red }&lt;/span&gt;
@@ -25,6 +26,17 @@
                                             <button class="btn btn-danger" @click="red=!red">change color</button>
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td><code>blueColor = {{ blueColor }}</code></td>
+                                        <td><pre><code>&lt;button class="btn" v-bind:class="{ 'blue-color':blueColor }"
+@click="blueColor=!blueColor"&gt;change color&lt;/button&gt;</code></pre></td>
+                                        <td>
+                                            <button class="btn" v-bind:class="{ 'blue-color':blueColor }" @click="blueColor=!blueColor">change color</button>
+                                        </td>
+                                    </tr>
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -39,8 +51,18 @@ export default {
     data() {
         return {
             red: false,
+            blueColor: false,
         }
     },
 
 }
 </script>
+<style>
+    .blue-color{
+        background-color: blue;
+        color: white;
+    }
+    .blue-color:hover{
+        color: white;
+    }
+</style>
