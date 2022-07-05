@@ -25,7 +25,7 @@
                 dersler: [
                     ['Ders -1','Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks','lesson-1'],
                     ['Ders -2','Form elementleri  ve özellikleri','lesson-2'],
-                    ['Ders -3','-','lesson-3'],
+                    ['Ders -3','Class & Style işlemleri','lesson-3'],
                 ]
             }
         },
