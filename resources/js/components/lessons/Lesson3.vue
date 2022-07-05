@@ -36,6 +36,14 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td><code>{{ inputValue.length }} </code></td>
+                                        <td><pre><code></code></pre></td>
+                                        <td>
+                                            <input type="text" class="form-control" v-model="inputValue">
+                                        </td>
+                                    </tr>
+
 
                                 </tbody>
                             </table>
@@ -52,8 +60,11 @@ export default {
         return {
             red: false,
             blueColor: false,
+            inputValue: "",
         }
     },
+
+  
 
 }
 </script>

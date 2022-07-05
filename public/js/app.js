@@ -5812,11 +5812,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       red: false,
-      blueColor: false
+      blueColor: false,
+      inputValue: ""
     };
   }
 });
@@ -30255,6 +30264,38 @@ var render = function () {
                     ),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [_vm._v(_vm._s(_vm.inputValue.length) + " ")]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.inputValue,
+                          expression: "inputValue",
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.inputValue },
+                      on: {
+                        input: function ($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.inputValue = $event.target.value
+                        },
+                      },
+                    }),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -30309,6 +30350,12 @@ var staticRenderFns = [
         ]),
       ]),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("pre", [_c("code")])])
   },
 ]
 render._withStripped = true
