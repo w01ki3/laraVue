@@ -37,10 +37,12 @@
                                     </tr>
 
                                     <tr>
-                                        <td><code>{{ inputValue.length }} </code></td>
-                                        <td><pre><code></code></pre></td>
+                                        <td><code>inputValue.length = {{ inputValue.length }} </code></td>
+                                        <td><pre><code>&lt;input type='text' class='form-control' 
+v-model='inputValue'
+v-bind:class="[inputValue.length &lt; 3 ? 'is-invalid' : 'is-valid']"&gt;</code></pre></td>
                                         <td>
-                                            <input type="text" class="form-control" v-model="inputValue">
+                                            <input type="text" class="form-control" v-model="inputValue" v-bind:class="[inputValue.length<3 ? 'is-invalid' : 'is-valid']">
                                         </td>
                                     </tr>
 

@@ -5820,6 +5820,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -30267,7 +30269,13 @@ var render = function () {
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [
-                    _c("code", [_vm._v(_vm._s(_vm.inputValue.length) + " ")]),
+                    _c("code", [
+                      _vm._v(
+                        "inputValue.length = " +
+                          _vm._s(_vm.inputValue.length) +
+                          " "
+                      ),
+                    ]),
                   ]),
                   _vm._v(" "),
                   _vm._m(3),
@@ -30283,6 +30291,9 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
+                      class: [
+                        _vm.inputValue.length < 3 ? "is-invalid" : "is-valid",
+                      ],
                       attrs: { type: "text" },
                       domProps: { value: _vm.inputValue },
                       on: {
@@ -30355,7 +30366,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [_c("pre", [_c("code")])])
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            "<input type='text' class='form-control' \nv-model='inputValue'\nv-bind:class=\"[inputValue.length < 3 ? 'is-invalid' : 'is-valid']\">"
+          ),
+        ]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
