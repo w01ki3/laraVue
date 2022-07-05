@@ -14,24 +14,39 @@
                 </tr>
               </thead>
               <tbody>
+
                 <tr>
                   <td>
                     <code> inputValue = {{ inputValue }} </code>
                   </td>
                   <td>
-                    <pre><code>&lt;input v-model="inputValue"&gt;</code></pre>
+                    <pre><code>&lt;input v-model="inputValue"/&gt;</code></pre>
                   </td>
                   <td><input type="text" v-model="inputValue" class="form-control" /></td>
                 </tr>
+
                 <tr>
                   <td>
                     <code> inputValue = {{ inputValue }} </code>
                   </td>
                   <td>
-                    <pre><code>&lt;input v-model.lazy="inputValue"&gt;</code></pre>
+                    <pre><code>&lt;input v-model.lazy="inputValue"/&gt;</code></pre>
                   </td>
                   <td><input type="text" v-model.lazy="inputValue" class="form-control" /></td>
                 </tr>
+
+                <tr>
+                  <td>
+                    <code> checked = {{ checked }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;type="checkbox" id="checkbox" v-model="checked"/&gt;</code></pre>
+                  </td>
+                  <td>
+                    <input type="checkbox" v-model="checked"/>
+                  </td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -46,6 +61,7 @@ export default {
   data() {
     return {
       inputValue: "yaz yada sil",
+      checked: false,
     };
   },
 };
