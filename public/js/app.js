@@ -5822,12 +5822,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       red: false,
       blueColor: false,
-      inputValue: ""
+      inputValue: "",
+      exampleStyle: {
+        color: 'red',
+        fontSize: '14px'
+      }
     };
   }
 });
@@ -30307,6 +30317,22 @@ var render = function () {
                     }),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v("exampleStyle: " + _vm._s(_vm.exampleStyle)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("p", { style: _vm.exampleStyle }, [
+                      _vm._v(_vm._s(_vm.exampleStyle)),
+                    ]),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -30372,6 +30398,18 @@ var staticRenderFns = [
           _vm._v(
             "<input type='text' class='form-control' \nv-model='inputValue'\nv-bind:class=\"[inputValue.length < 3 ? 'is-invalid' : 'is-valid']\">"
           ),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v('<p v-bind:style="exampleStyle">{ exampleStyle }</p>'),
         ]),
       ]),
     ])

@@ -46,6 +46,12 @@ v-bind:class="[inputValue.length &lt; 3 ? 'is-invalid' : 'is-valid']"&gt;</code>
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td><code>exampleStyle: {{ exampleStyle }}</code></td>
+                                        <td><pre><code>&lt;p v-bind:style="exampleStyle"&gt;{ exampleStyle }&lt;/p&gt;</code></pre></td>
+                                        <td><p v-bind:style="exampleStyle">{{ exampleStyle }}</p></td>
+                                    </tr>
+
 
                                 </tbody>
                             </table>
@@ -63,6 +69,10 @@ export default {
             red: false,
             blueColor: false,
             inputValue: "",
+            exampleStyle:{
+                color:'red',
+                fontSize:'14px',
+            }
         }
     },
 
