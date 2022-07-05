@@ -29219,6 +29219,7 @@ var render = function () {
                           expression: "checked",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "checkbox" },
                       domProps: {
                         checked: Array.isArray(_vm.checked)
@@ -29271,6 +29272,7 @@ var render = function () {
                           expression: "checkedNames",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "checkbox", id: "1", value: "1" },
                       domProps: {
                         checked: Array.isArray(_vm.checkedNames)
@@ -29311,6 +29313,7 @@ var render = function () {
                           expression: "checkedNames",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "checkbox", id: "2", value: "2" },
                       domProps: {
                         checked: Array.isArray(_vm.checkedNames)
@@ -29351,6 +29354,7 @@ var render = function () {
                           expression: "checkedNames",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "checkbox", id: "3", value: "3" },
                       domProps: {
                         checked: Array.isArray(_vm.checkedNames)
@@ -29403,6 +29407,7 @@ var render = function () {
                           expression: "picked",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "radio", id: "one", value: "One" },
                       domProps: { checked: _vm._q(_vm.picked, "One") },
                       on: {
@@ -29423,6 +29428,7 @@ var render = function () {
                           expression: "picked",
                         },
                       ],
+                      staticClass: "form-check-input",
                       attrs: { type: "radio", id: "two", value: "Two" },
                       domProps: { checked: _vm._q(_vm.picked, "Two") },
                       on: {
@@ -29457,6 +29463,7 @@ var render = function () {
                             expression: "selected",
                           },
                         ],
+                        staticClass: "form-select",
                         on: {
                           change: function ($event) {
                             var $$selectedVal = Array.prototype.filter
@@ -29507,6 +29514,7 @@ var render = function () {
                             expression: "selectedMulti",
                           },
                         ],
+                        staticClass: "form-select",
                         attrs: { multiple: "" },
                         on: {
                           change: function ($event) {
@@ -29555,6 +29563,7 @@ var render = function () {
                           modifiers: { number: true },
                         },
                       ],
+                      staticClass: "form-control",
                       attrs: { type: "number" },
                       domProps: { value: _vm.numberValue },
                       on: {
