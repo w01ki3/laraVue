@@ -5932,8 +5932,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5961,10 +5959,10 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    getTypeClass: function getTypeClass() {
+    bindClass: function bindClass() {
       return {
         'is-invalid': this.errors.length > 0,
-        'is-valid': this.errors == null && this.inputValue < 4 || this.inputValue > 15
+        'is-valid': this.inputValue != ''
       };
     }
   }
@@ -30704,9 +30702,9 @@ var render = function () {
                     _c("pre", [
                       _c("code", [
                         _vm._v(
-                          '<input type="text" class="form-control" \n    v-model="inputValue" :class="getTypeClass">\n<div class="invalid-feedback">\n    <li v-for="error in errors">' +
+                          '<input type="text" class="form-control" \n    v-model="inputValue" :class="bindClass">\n<div class="invalid-feedback">\n    <li v-for="error in errors">' +
                             _vm._s(_vm.error) +
-                            '</li>\n</div>\n\nwatch:{\n    inputValue(val){\n        this.errors = [];\n        if(val == ""){\n            this.errors.push("this field cannot be left blank")\n        }\n        if(val.length < 4 || val.length > 15){\n            this.errors.push("value must be between 3 and 15 characters")\n        }\n    }\n\n},\ncomputed:{\n    getTypeClass () {\n        return {\n            \'is-invalid\': this.errors.length>0,\n            \'is-valid\': this.errors == null \n            && this.inputValue < 4 \n            || this.inputValue > 15, \n        }\n  }\n}\n\n                                    '
+                            "</li>\n</div>\n\nwatch:{\n    inputValue(val){\n        this.errors = [];\n        if(val == \"\"){\n            this.errors.push(\"this field cannot be left blank\")\n        }\n        if(val.length < 4 || val.length > 15){\n            this.errors.push(\"value must be between 3 and 15 characters\")\n        }\n    }\n\n},\ncomputed:{\n    bindClass () {\n        return {\n            'is-invalid': this.errors.length>0,\n            'is-valid': this.inputValue != '' \n        }\n  }\n}\n\n                                    "
                         ),
                       ]),
                     ]),
@@ -30723,7 +30721,7 @@ var render = function () {
                         },
                       ],
                       staticClass: "form-control",
-                      class: _vm.getTypeClass,
+                      class: _vm.bindClass,
                       attrs: { type: "text" },
                       domProps: { value: _vm.inputValue },
                       on: {

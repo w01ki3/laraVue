@@ -35,7 +35,7 @@ watch:{
                                 <tr>
                                     <td><code>inputValue = {{ inputValue }} | errors = {{ errors }}</code></td>
                                     <td><pre><code>&lt;input type="text" class="form-control" 
-    v-model="inputValue" :class="getTypeClass"&gt;
+    v-model="inputValue" :class="bindClass"&gt;
 &lt;div class="invalid-feedback"&gt;
     &lt;li v-for="error in errors">{{ error }}&lt;/li&gt;
 &lt;/div&gt;
@@ -53,19 +53,17 @@ watch:{
 
 },
 computed:{
-    getTypeClass () {
+    bindClass () {
         return {
             'is-invalid': this.errors.length>0,
-            'is-valid': this.errors == null 
-            && this.inputValue &lt; 4 
-            || this.inputValue > 15, 
+            'is-valid': this.inputValue != '' 
         }
   }
 }
 
                                     </code></pre></td>
                                     <td>
-                                        <input type="text" class="form-control" v-model="inputValue" :class="getTypeClass">
+                                        <input type="text" class="form-control" v-model="inputValue" :class="bindClass">
                                         <div class="invalid-feedback">
                                             <li v-for="error in errors">{{ error }}</li>
                                         </div>
@@ -106,10 +104,10 @@ export default {
 
     },
     computed:{
-        getTypeClass () {
+        bindClass () {
             return {
                 'is-invalid': this.errors.length>0,
-                'is-valid': this.errors == null && this.inputValue < 4 || this.inputValue > 15, 
+                'is-valid': this.inputValue != ''
             }
       }
     }
