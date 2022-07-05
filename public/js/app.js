@@ -5629,6 +5629,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -29053,6 +29062,38 @@ var render = function () {
                     }),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(" inputValue = " + _vm._s(_vm.inputValue) + " "),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model.lazy",
+                          value: _vm.inputValue,
+                          expression: "inputValue",
+                          modifiers: { lazy: true },
+                        },
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text" },
+                      domProps: { value: _vm.inputValue },
+                      on: {
+                        change: function ($event) {
+                          _vm.inputValue = $event.target.value
+                        },
+                      },
+                    }),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -29086,6 +29127,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("td", [
       _c("pre", [_c("code", [_vm._v('<input v-model="inputValue">')])]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [_c("code", [_vm._v('<input v-model.lazy="inputValue">')])]),
     ])
   },
 ]

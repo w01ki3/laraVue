@@ -23,6 +23,15 @@
                   </td>
                   <td><input type="text" v-model="inputValue" class="form-control" /></td>
                 </tr>
+                <tr>
+                  <td>
+                    <code> inputValue = {{ inputValue }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;input v-model.lazy="inputValue"&gt;</code></pre>
+                  </td>
+                  <td><input type="text" v-model.lazy="inputValue" class="form-control" /></td>
+                </tr>
               </tbody>
             </table>
           </div>
