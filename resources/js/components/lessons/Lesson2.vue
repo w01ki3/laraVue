@@ -85,6 +85,32 @@
                   </td>
                 </tr>
 
+                <tr>
+                  <td>
+                    <code> selected = {{ selected  }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;select v-model="selected" multiple&gt;
+  &lt;option&gt;A&lt;/option&gt;
+  &lt;option&gt;B&lt;/option&gt;
+  &lt;option&gt;C&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </td>
+                  <td>
+                    <select v-model="selected">
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -100,8 +126,9 @@ export default {
     return {
       inputValue: "yaz yada sil",
       checked: false,
-      checkedNames:[],
-      picked: "One"
+      checkedNames: [],
+      picked: "One",
+      selected: [],
     };
   },
 };
