@@ -5653,11 +5653,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       inputValue: "yaz yada sil",
-      checked: false
+      checked: false,
+      checkedNames: []
     };
   }
 });
@@ -29160,6 +29182,140 @@ var render = function () {
                     }),
                   ]),
                 ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [
+                    _c("code", [
+                      _vm._v(
+                        " checkedNames = " + _vm._s(_vm.checkedNames) + " "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.checkedNames,
+                          expression: "checkedNames",
+                        },
+                      ],
+                      attrs: { type: "checkbox", id: "1", value: "1" },
+                      domProps: {
+                        checked: Array.isArray(_vm.checkedNames)
+                          ? _vm._i(_vm.checkedNames, "1") > -1
+                          : _vm.checkedNames,
+                      },
+                      on: {
+                        change: function ($event) {
+                          var $$a = _vm.checkedNames,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "1",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.checkedNames = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.checkedNames = $$c
+                          }
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "1" } }, [_vm._v("1")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.checkedNames,
+                          expression: "checkedNames",
+                        },
+                      ],
+                      attrs: { type: "checkbox", id: "2", value: "2" },
+                      domProps: {
+                        checked: Array.isArray(_vm.checkedNames)
+                          ? _vm._i(_vm.checkedNames, "2") > -1
+                          : _vm.checkedNames,
+                      },
+                      on: {
+                        change: function ($event) {
+                          var $$a = _vm.checkedNames,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "2",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.checkedNames = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.checkedNames = $$c
+                          }
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "2" } }, [_vm._v("2")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.checkedNames,
+                          expression: "checkedNames",
+                        },
+                      ],
+                      attrs: { type: "checkbox", id: "3", value: "3" },
+                      domProps: {
+                        checked: Array.isArray(_vm.checkedNames)
+                          ? _vm._i(_vm.checkedNames, "3") > -1
+                          : _vm.checkedNames,
+                      },
+                      on: {
+                        change: function ($event) {
+                          var $$a = _vm.checkedNames,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "3",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.checkedNames = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.checkedNames = $$c
+                          }
+                        },
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("label", { attrs: { for: "3" } }, [_vm._v("3")]),
+                  ]),
+                ]),
               ]),
             ]),
           ]),
@@ -29210,7 +29366,21 @@ var staticRenderFns = [
     return _c("td", [
       _c("pre", [
         _c("code", [
-          _vm._v('<type="checkbox" id="checkbox" v-model="checked"/>'),
+          _vm._v('<input type="checkbox" id="checkbox" v-model="checked"/>'),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("pre", [
+        _c("code", [
+          _vm._v(
+            '<input type="checkbox" id="1" value="1" v-model="checkedNames"/>\n<input type="checkbox" id="2" value="2" v-model="checkedNames"/>\n<input type="checkbox" id="3" value="3" v-model="checkedNames"/>'
+          ),
         ]),
       ]),
     ])

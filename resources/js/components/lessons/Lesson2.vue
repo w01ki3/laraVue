@@ -40,10 +40,31 @@
                     <code> checked = {{ checked }} </code>
                   </td>
                   <td>
-                    <pre><code>&lt;type="checkbox" id="checkbox" v-model="checked"/&gt;</code></pre>
+                    <pre><code>&lt;input type="checkbox" id="checkbox" v-model="checked"/&gt;</code></pre>
                   </td>
                   <td>
                     <input type="checkbox" v-model="checked"/>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code> checkedNames = {{ checkedNames }} </code>
+                  </td>
+                  <td>
+                    <pre><code>&lt;input type="checkbox" id="1" value="1" v-model="checkedNames"/&gt;
+&lt;input type="checkbox" id="2" value="2" v-model="checkedNames"/&gt;
+&lt;input type="checkbox" id="3" value="3" v-model="checkedNames"/&gt;</code></pre>
+                  </td>
+                  <td>
+                    <input type="checkbox" id="1" value="1" v-model="checkedNames">
+                    <label for="1">1</label>
+
+                    <input type="checkbox" id="2" value="2" v-model="checkedNames">
+                    <label for="2">2</label>
+
+                    <input type="checkbox" id="3" value="3" v-model="checkedNames">
+                    <label for="3">3</label>
                   </td>
                 </tr>
 
@@ -62,6 +83,7 @@ export default {
     return {
       inputValue: "yaz yada sil",
       checked: false,
+      checkedNames:[],
     };
   },
 };
