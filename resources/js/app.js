@@ -15,6 +15,7 @@ const routes = [
     {path: '/lesson-2', component: require('./components/lessons/Lesson2.vue').default},
     {path: '/lesson-3', component: require('./components/lessons/Lesson3.vue').default},
     {path: '/lesson-4', component: require('./components/lessons/Lesson4.vue').default},
+    {path: '/lesson-5', component: require('./components/lessons/Lesson5.vue').default},
 ]
 
 const router = new VueRouter({
