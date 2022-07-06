@@ -21,10 +21,11 @@ export default {
   data() {
     return {
       dersler: [
-        ["Ders -1", "Temel Vue.js Yapısı Döngüler Koşullar Methods Hooks", "lesson-1"],
+        ["Ders -1", "Döngüler ve basit form elementleri", "lesson-1"],
         ["Ders -2", "Form elementleri  ve özellikleri", "lesson-2"],
         ["Ders -3", "Class & Style işlemleri", "lesson-3"],
-        ["Ders -4", "Watch kullanımı", "lesson-4"],
+        ["Ders -4", "Watch kullanımı | val & oldVal | External component", "lesson-4"],
+        ["Ders -5", "Mysql fetch & crud", "lesson-5"],
       ],
     };
   },

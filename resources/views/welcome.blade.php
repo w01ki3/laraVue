@@ -55,6 +55,9 @@
                                     <li>
                                         <router-link to="/lesson-4" class="dropdown-item" exact>Ders - 4</router-link>
                                     </li>
+                                    <li>
+                                        <router-link to="/lesson-5" class="dropdown-item" exact>Ders - 5</router-link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
