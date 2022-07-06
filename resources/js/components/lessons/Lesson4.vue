@@ -98,6 +98,31 @@ methods: {
                                         <button :disabled="errors.length>0 || inputValue==''" class="btn btn-primary" @click="addData">add [+]</button>
                                     </td>
                                 </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <pre><code>&lt;external-component @deleteData="deleteData" :inputData="inputData"&gt;&lt;/external-component&gt;    
+
+import ExternalComponent from './ExternalComponent.vue'
+export default {
+    components:{
+        ExternalComponent
+    }
+}    
+
+//ExternalComponent.vue
+
+&lt;tr v-for="(row,index) in inputData" :key="index"&gt;
+    &lt;td&gt;{ row }&lt;/td&gt;
+    &lt;td&gt;&lt;button class="btn btn-danger btn-sm mb-1" @click="$emit('deleteData',index)"&gt;[-]&lt;/button&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+export default {
+    props:['inputData']
+}</code></pre>
+                                        <external-component @deleteData="deleteData" :inputData="inputData"></external-component>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -107,7 +132,13 @@ methods: {
     </div>
 </template>
 <script>
+
+import ExternalComponent from './ExternalComponent.vue'
+
 export default {
+    components:{
+        ExternalComponent
+    },
     data() {
         return {
             counter:0,
@@ -115,6 +146,7 @@ export default {
             inputValue:"",
             errors:[],
             inputData:[],
+            error:"",
         }
     },
     watch:{
