@@ -35,7 +35,7 @@ php artisan key:generate
 ```
 php artisan serve
 ```
-##### Step 8
+##### Step 8 / open url in web browser
 ```
-open url in web browser http://localhost:8000/
+http://localhost:8000/
 ```
