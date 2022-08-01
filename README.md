@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="public/img/vkIcon.png" style="width: 100px;">
+    <img src="resources/img/vkIcon.png" style="width: 100px;">
     <br>
     laraVue | w01ki3
 </p>
@@ -33,9 +33,13 @@ php artisan key:generate
 ```
 ##### Step 7
 ```
+npm run dev
+```
+##### Step 8
+```
 php artisan serve
 ```
-##### Step 8 / open url in web browser
+##### Step 9 / open url in web browser
 ```
 http://localhost:8000/
 ```
