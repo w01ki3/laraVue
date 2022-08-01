@@ -5,7 +5,7 @@
         <div class="card-header">Ana Dizin & Vue</div>
         <div class="card-body">
           <li v-for="(item, index) in dersler" :key="index">
-            <a :href="item[2]"> {{ item[0] }} / {{ item[1] }} </a>
+            <router-link :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
           </li>
         </div>
       </div>
@@ -16,7 +16,7 @@
 <script>
 export default {
   mounted() {
-    console.log("Component mounted.");
+    console.log("Home Component mounted.");
   },
   data() {
     return {
