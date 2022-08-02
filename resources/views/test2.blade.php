@@ -13,7 +13,9 @@
 </head>
 
 <body class="antialiased">
-    <div id="app">
+    {{ '------from blade before <div id="app">   '.$imFromController .' you must refresh to see me!!'}}
+    <div id="app2">
+        {{ $imFromController }}
     </div>
 </body>
 

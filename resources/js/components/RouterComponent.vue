@@ -1,10 +1,11 @@
+
 <template>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <router-link to="/" class="nav-link" exact>
           <img src="@/../img/vkIcon.png" height="50" alt="logo" />
-        </a>
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,12 +67,13 @@
                 </li>
               </ul>
             </li>
+            <li><a class="nav-link admin-laravel-link" href="/page2">Go to NAD</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
-  <router-view></router-view>
+    <router-view></router-view>
 </template>
 
 <script></script>

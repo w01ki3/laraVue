@@ -1,0 +1,8 @@
+.admin-laravel-link{
+    color: rgba(0, 0, 0, 0.55);
+    text-decoration: none;
+}
+
+.admin-laravel-link:hover{
+    color: rgba(0, 0, 0, 0.7);
+}
