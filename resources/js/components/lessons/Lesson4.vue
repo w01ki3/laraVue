@@ -103,7 +103,8 @@ methods: {
         this.inputData.push(this.inputValue)
     },
     deleteData(index){
-        this.$delete(this.inputData,index)
+        this.inputData.splice(index, 1);
+        this.inputData.value = "";
     } 
 }
 </code></pre>
