@@ -7,6 +7,9 @@
           <li v-for="(item, index) in dersler" :key="index">
             <router-link :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
           </li>
+          <li>
+            <a :href="nadPage[0]">{{ nadPage[1] }}</a>
+          </li>
         </div>
       </div>
     </div>
@@ -27,6 +30,7 @@ export default {
         ["Ders -4", "Watch kullanımı | val & oldVal | External component", "lesson-4"],
         ["Ders -5", "Mysql fetch & crud", "lesson-5"],
       ],
+      nadPage: ["/page2","Go To NAD"],
     };
   },
 };
