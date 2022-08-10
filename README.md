@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="resources/img/vkIcon.png" style="width: 100px;">
+    <img src="public/img/vkIcon.png" style="width: 100px;">
     <br>
     laraVue | w01ki3
 </p>
@@ -25,7 +25,7 @@ npm install
 ```
 ##### Step 5
 ```
-copy .env.example .env
+copy .env.example .env (for windows) || cp .env.example .env (for bash)
 ```
 ##### Step 6
 ```
