@@ -72,8 +72,8 @@
                   </code></pre>
                   </td>
                   <td>
-                    <button class="btn btn-primary" @click="numberValue--">-</button>
-                    <button class="btn btn-primary" @click="numberValue++">+</button>
+                    <button class="btn btn-primary m-1" @click="numberValue--">-</button>
+                    <button class="btn btn-primary m-1" @click="numberValue++">+</button>
                   </td>
                 </tr>
               </tbody>
