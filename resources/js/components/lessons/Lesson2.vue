@@ -58,13 +58,13 @@
 &lt;input type="checkbox" id="3" value="3" v-model="checkedNames"/&gt;</code></pre>
                     </td>
                     <td>
-                      <input class="form-check-input" type="checkbox" id="1" value="1" v-model="checkedNames">
+                      <input class="form-check-input m-1" type="checkbox" id="1" value="1" v-model="checkedNames">
                       <label for="1">1</label>
 
-                      <input class="form-check-input" type="checkbox" id="2" value="2" v-model="checkedNames">
+                      <input class="form-check-input m-1" type="checkbox" id="2" value="2" v-model="checkedNames">
                       <label for="2">2</label>
 
-                      <input class="form-check-input" type="checkbox" id="3" value="3" v-model="checkedNames">
+                      <input class="form-check-input m-1" type="checkbox" id="3" value="3" v-model="checkedNames">
                       <label for="3">3</label>
                     </td>
                   </tr>
