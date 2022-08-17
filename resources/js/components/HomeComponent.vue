@@ -8,6 +8,9 @@
             <li v-for="(item, index) in dersler" :key="index">
               <router-link class="links" :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
             </li>
+            <li>
+              <a href="https://github.com/w01ki3/projxBrief/blob/main/resources/js/components/BuyATicket.vue" target="_blank" class="links">Ders -5 / Mysql fetch & crud</a>
+            </li>
           </div>
         </div>
       </div>
@@ -27,7 +30,6 @@ export default {
         ["Ders -2", "Form elementleri  ve özellikleri", "lesson-2"],
         ["Ders -3", "Class & Style işlemleri", "lesson-3"],
         ["Ders -4", "Watch kullanımı | val & oldVal | External component", "lesson-4"],
-        ["Ders -5", "Mysql fetch & crud", "lesson-5"],
       ],
     };
   },

@@ -60,8 +60,10 @@
                   >
                 </li>
                 <li>
-                  <router-link to="/lesson-5" class="dropdown-item" exact
-                    >Ders - 5</router-link
+                  <a  href="https://github.com/w01ki3/projxBrief/blob/main/resources/js/components/BuyATicket.vue" 
+                      class="dropdown-item"
+                      target="_blank"
+                    >Ders - 5</a
                   >
                 </li>
               </ul>
