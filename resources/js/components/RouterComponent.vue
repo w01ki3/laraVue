@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand" href="/">
-          <img src="img/vkIcon.png" height="50" alt="logo" />
+          <img :src="'img/vkIcon.png'" height="50" alt="logo" />
         </router-link>
         <button
           class="navbar-toggler"

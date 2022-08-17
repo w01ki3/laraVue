@@ -1,12 +1,14 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-md-8 mt-3">
-      <div class="card">
-        <div class="card-header">Ana Dizin & Vue</div>
-        <div class="card-body">
-          <li v-for="(item, index) in dersler" :key="index">
-            <router-link :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
-          </li>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col mt-3">
+        <div class="card">
+          <div class="card-header">Ana Dizin & Vue</div>
+          <div class="card-body">
+            <li v-for="(item, index) in dersler" :key="index">
+              <router-link :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
+            </li>
+          </div>
         </div>
       </div>
     </div>
