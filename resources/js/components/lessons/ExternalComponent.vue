@@ -23,6 +23,6 @@ export default {
     props:['inputData']
 }
 </script>
-<style lang="">
+<style>
     
 </style>
