@@ -6,7 +6,7 @@
           <div class="card-header">Ana Dizin & Vue</div>
           <div class="card-body">
             <li v-for="(item, index) in dersler" :key="index">
-              <router-link :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
+              <router-link class="links" :to="item[2]"> {{ item[0] }} / {{ item[1] }}</router-link>
             </li>
           </div>
         </div>
@@ -33,3 +33,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.links{
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style-type: none;
+}
+</style>
