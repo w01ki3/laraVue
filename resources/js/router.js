@@ -6,7 +6,7 @@ import Lesson1 from './components/lessons/Lesson1.vue';
 import Lesson2 from './components/lessons/Lesson2.vue';
 import Lesson3 from './components/lessons/Lesson3.vue';
 import Lesson4 from './components/lessons/Lesson4.vue';
-import Lesson5 from './components/lessons/Lesson5.vue';
+// import Lesson5 from './components/lessons/Lesson5.vue';
 
 const routes = [
     {path: '/', component: HomeComponent},
@@ -16,7 +16,7 @@ const routes = [
     {path: '/lesson-2', component: Lesson2},
     {path: '/lesson-3', component: Lesson3},
     {path: '/lesson-4', component: Lesson4},
-    {path: '/lesson-5', component: Lesson5},
+    // {path: '/lesson-5', component: Lesson5},
 ];
 
 const router = createRouter({
